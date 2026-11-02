@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ccmge1p4jjv4s"
+path="res://.godot/imported/Postal 1 OST — Menu (www.lightaudio.ru).mp3-3b1789625a69ee4d5445e72b9f839d8e.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Postal 1 OST — Menu (www.lightaudio.ru).mp3"
+dest_files=["res://.godot/imported/Postal 1 OST — Menu (www.lightaudio.ru).mp3-3b1789625a69ee4d5445e72b9f839d8e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bo3hueto61cp3"]
+
+[ext_resource type="Texture2D" uid="uid://bvgijcbtj7khu" path="res://assets/sprites/blood.png" id="1_4aafy"]
+
+[node name="BloodSpurt" type="Sprite2D" unique_id=792624985]
+texture = ExtResource("1_4aafy")

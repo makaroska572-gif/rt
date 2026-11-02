@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cdofhgyc8js7o"]
+
+[ext_resource type="Script" uid="uid://k47vwo2fyp6o" path="res://Scenes/zombiespawner.gd" id="1_wn7q4"]
+
+[node name="Marker2D" type="Marker2D" unique_id=1528104222]
+script = ExtResource("1_wn7q4")

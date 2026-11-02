@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://bs4hbwb6mgwlv"]
+
+[ext_resource type="Script" uid="uid://dty86v04gssjf" path="res://Scripts/player.gd" id="1_fkybt"]
+[ext_resource type="Texture2D" uid="uid://b4pteyge1g65t" path="res://assets/sprites/player1.png" id="2_fkybt"]
+[ext_resource type="Texture2D" uid="uid://bdlwvekfj6dqh" path="res://assets/sprites/left eye.png" id="3_8erm5"]
+[ext_resource type="Texture2D" uid="uid://c0mi44gbojnyc" path="res://assets/sprites/righteye.png" id="4_f1ek2"]
+[ext_resource type="Texture2D" uid="uid://0lqvw6jblftn" path="res://assets/sprites/stamina_fill.png" id="4_x3wgy"]
+[ext_resource type="Script" uid="uid://capu6pts6l4pv" path="res://Scripts/staminabar.gd" id="5_x3wgy"]
+[ext_resource type="AudioStream" uid="uid://iu564h7neg43" path="res://assets/sounds/3edc1efc346c39f.mp3" id="6_x3wgy"]
+[ext_resource type="Texture2D" uid="uid://celcx1gt7awrk" path="res://assets/sprites/health_fill.png" id="9_ukyrk"]
+[ext_resource type="Texture2D" uid="uid://o0nhykh4jkv" path="res://assets/sprites/zomb_bg.png" id="10_7dp3o"]
+[ext_resource type="Texture2D" uid="uid://wwkdjm7t4rpf" path="res://assets/sprites/zombiestatus_fill.png" id="11_h4iuc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
+size = Vector2(30, 30)
+
+[node name="Player" type="CharacterBody2D" unique_id=239942715]
+scale = Vector2(3.9684224, 4.118582)
+script = ExtResource("1_fkybt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2136912370]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1667420986]
+position = Vector2(-1.5, 1.0000005)
+scale = Vector2(1.9411764, 2)
+texture = ExtResource("2_fkybt")
+
+[node name="Eyes" type="Node2D" parent="Sprite2D" unique_id=1966632596]
+
+[node name="LeftPupil" type="Sprite2D" parent="Sprite2D/Eyes" unique_id=1077353312]
+texture = ExtResource("3_8erm5")
+
+[node name="RightPupil" type="Sprite2D" parent="Sprite2D/Eyes" unique_id=1187392917]
+texture = ExtResource("4_f1ek2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=118582669]
+
+[node name="StaminaBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=36518041]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -316.0
+offset_top = 65.0
+offset_right = -48.0
+offset_bottom = 101.0
+grow_horizontal = 0
+nine_patch_stretch = true
+texture_progress = ExtResource("4_x3wgy")
+script = ExtResource("5_x3wgy")
+
+[node name="AmmoLabel" type="Label" parent="CanvasLayer" unique_id=1335768330]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -61.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "30 / 120"
+
+[node name="HealthBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=13696024]
+offset_left = 803.0
+offset_top = 7.0
+offset_right = 1103.0
+offset_bottom = 31.0
+texture_progress = ExtResource("9_ukyrk")
+
+[node name="InfectionBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=1334966347]
+offset_left = 803.0
+offset_top = 36.0
+offset_right = 1103.0
+offset_bottom = 60.0
+texture_under = ExtResource("10_7dp3o")
+texture_progress = ExtResource("11_h4iuc")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1305639005]
+
+[node name="WeaponAnchor" type="Node2D" parent="." unique_id=943314489]
+position = Vector2(0, 5)
+
+[node name="FootstepsPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1052897655]
+stream = ExtResource("6_x3wgy")

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://6u73eayvjors"]
+
+[ext_resource type="Script" uid="uid://bhkx52bar4qty" path="res://Scripts/maps.gd" id="1_hirh5"]
+[ext_resource type="Texture2D" uid="uid://erfcq8tc4cwn" path="res://assets/sprites/menu.png" id="1_ji8sj"]
+
+[node name="Maps" type="Control" unique_id=1873055558]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hirh5")
+
+[node name="Menu" type="Sprite2D" parent="." unique_id=1799165550]
+position = Vector2(577, 330)
+scale = Vector2(3.7187498, 2.090625)
+texture = ExtResource("1_ji8sj")
+
+[node name="Label" type="Label" parent="." unique_id=1960738821]
+layout_mode = 0
+offset_left = 558.0
+offset_top = 55.0
+offset_right = 687.0
+offset_bottom = 85.0
+text = "CHOOZE A MAP"
+
+[node name="Button" type="Button" parent="." unique_id=1309400976]
+layout_mode = 0
+offset_left = 547.0
+offset_top = 243.0
+offset_right = 694.0
+offset_bottom = 274.0
+text = "sf_imperial_castle"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

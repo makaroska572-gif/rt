@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://budye3cu278wv"]
+
+[ext_resource type="Texture2D" uid="uid://28ffsey1ys5i" path="res://assets/sprites/flag.png" id="1_snk6q"]
+[ext_resource type="Script" uid="uid://kq73gh4u6asw" path="res://Scripts/flag.gd" id="1_vie08"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bhunq"]
+radius = 9.0
+height = 26.0
+
+[node name="Flag" type="Area2D" unique_id=1285873708]
+script = ExtResource("1_vie08")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2033737265]
+position = Vector2(0, -4.7683716e-07)
+scale = Vector2(2, 1.875)
+texture = ExtResource("1_snk6q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=351699907]
+position = Vector2(5, 2)
+shape = SubResource("CapsuleShape2D_bhunq")

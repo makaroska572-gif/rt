@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c1h34iixtyf2x"]
+
+[ext_resource type="Texture2D" uid="uid://cpydshjcwdg7e" path="res://assets/sprites/zombie_team.png" id="1_iyl7r"]
+[ext_resource type="Script" uid="uid://do1ssyqihk3vx" path="res://Scripts/zombie.gd" id="1_vy0uf"]
+[ext_resource type="Texture2D" uid="uid://bjyrrx3v1pbf3" path="res://assets/sprites/left zombie eye.png" id="2_vy0uf"]
+[ext_resource type="Texture2D" uid="uid://cuasgguusyo6y" path="res://assets/sprites/right zombie eye.png" id="3_w2xga"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
+size = Vector2(16, 14)
+
+[node name="Zombie" type="CharacterBody2D" unique_id=989484675]
+scale = Vector2(1.9904317, 2.1351414)
+script = ExtResource("1_vy0uf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1473626853]
+texture = ExtResource("1_iyl7r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2015612209]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="Eyes" type="Node2D" parent="." unique_id=1388899310]
+
+[node name="LeftPupil" type="Sprite2D" parent="Eyes" unique_id=185658747]
+position = Vector2(1.0000002, 1)
+scale = Vector2(1.036206, 0.95631516)
+texture = ExtResource("2_vy0uf")
+
+[node name="RightPupil" type="Sprite2D" parent="Eyes" unique_id=1637745491]
+position = Vector2(-1, 0)
+texture = ExtResource("3_w2xga")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=554275991]

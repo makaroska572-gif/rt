@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://xteuxeugjk5l"]
+
+[ext_resource type="Texture2D" uid="uid://ctmiu4yyqgpp3" path="res://assets/sprites/map.test_playgraund.png" id="1_q4i4h"]
+[ext_resource type="PackedScene" uid="uid://bs4hbwb6mgwlv" path="res://Scenes/player.tscn" id="2_cqkdf"]
+[ext_resource type="PackedScene" uid="uid://c0n11i1l5c7l6" path="res://Scenes/aceg.tscn" id="3_25cbd"]
+[ext_resource type="PackedScene" uid="uid://5pflaidexy2h" path="res://Scenes/wallS.tscn" id="4_cqkdf"]
+[ext_resource type="PackedScene" uid="uid://bbjk1mq8ky0tc" path="res://Scenes/ak_47.tscn" id="6_orkc2"]
+[ext_resource type="PackedScene" uid="uid://f1xkayam4gbq" path="res://Scenes/weapon_usp.tscn" id="7_gk1db"]
+[ext_resource type="PackedScene" uid="uid://c1h34iixtyf2x" path="res://Scenes/zombie.tscn" id="8_rb63q"]
+
+[node name="map_test_playground" type="Node2D" unique_id=275284451]
+
+[node name="Map_testPlaygraund" type="Sprite2D" parent="." unique_id=164275068]
+position = Vector2(570, 325.99997)
+scale = Vector2(1, 1.0866667)
+texture = ExtResource("1_q4i4h")
+
+[node name="Player" parent="." unique_id=239942715 instance=ExtResource("2_cqkdf")]
+position = Vector2(549, 286)
+scale = Vector2(1.0951146, 1.141779)
+
+[node name="wall4" parent="." unique_id=212790950 instance=ExtResource("4_cqkdf")]
+position = Vector2(321, 525)
+
+[node name="AK47" parent="." unique_id=264655472 instance=ExtResource("6_orkc2")]
+position = Vector2(247, 351)
+
+[node name="Aceg" parent="." unique_id=1476471835 instance=ExtResource("3_25cbd")]
+position = Vector2(230, 295)
+
+[node name="Weapon" parent="." unique_id=1675116201 instance=ExtResource("7_gk1db")]
+position = Vector2(246, 390)
+
+[node name="Zombie" parent="." unique_id=989484675 instance=ExtResource("8_rb63q")]
+position = Vector2(900.00006, 246.00002)
+
+[node name="Zombie2" parent="." unique_id=744689655 instance=ExtResource("8_rb63q")]
+position = Vector2(970, 317)

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c28op5ykp6tl3"]
+
+[ext_resource type="Texture2D" uid="uid://ct5upp810viqn" path="res://assets/sprites/wood_wall_OLD.png" id="1_ynfoe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
+size = Vector2(16, 16)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1757736006]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1640692214]
+texture = ExtResource("1_ynfoe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1409923343]
+shape = SubResource("RectangleShape2D_bhunq")

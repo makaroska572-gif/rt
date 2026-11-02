@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bxq8sqo1bh04s"]
+
+[ext_resource type="Script" uid="uid://wikraltnt41q" path="res://Scripts/weapon.gd" id="1_er6cq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_riqys"]
+bounce = 0.5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bhunq"]
+radius = 11.401754
+
+[node name="Weapon" type="RigidBody2D" unique_id=264655472]
+physics_material_override = SubResource("PhysicsMaterial_riqys")
+gravity_scale = 0.0
+script = ExtResource("1_er6cq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1333913407]
+shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1034214324]
+position = Vector2(0, 4)
+scale = Vector2(1.03125, 1)
+
+[node name="PickUpArea" type="Area2D" parent="." unique_id=1764639880]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpArea" unique_id=1855470894]
+shape = SubResource("CircleShape2D_bhunq")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=49381832]
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=1259009846]
+position = Vector2(15, 0)
+
+[node name="ShootPlayer" type="AudioStreamPlayer2D" parent="." unique_id=702389518]

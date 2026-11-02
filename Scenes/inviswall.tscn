@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://fupw5x5u40v4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
+size = Vector2(0.09907818, 9.199303)
+
+[node name="inviswall" type="StaticBody2D" unique_id=1452561569]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1604704317]
+position = Vector2(3.5000005, 318.81628)
+scale = Vector2(70.651276, 72.43674)
+shape = SubResource("RectangleShape2D_bhunq")

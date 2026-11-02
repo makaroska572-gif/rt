@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cfnddy6i8kfj"]
+
+[ext_resource type="Texture2D" uid="uid://roohqguppsvy" path="res://assets/sprites/wallwood.png" id="1_d155t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
+size = Vector2(8, 36)
+
+[node name="Wall" type="StaticBody2D" unique_id=959835620]
+scale = Vector2(0.8399997, 1.4800003)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1689998593]
+shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=648059578]
+position = Vector2(1.1920929e-07, 7.1525574e-07)
+scale = Vector2(0.5, 2.25)
+texture = ExtResource("1_d155t")

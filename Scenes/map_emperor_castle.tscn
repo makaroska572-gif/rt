@@ -1,0 +1,297 @@
+[gd_scene format=3 uid="uid://bx4an76j20t24"]
+
+[ext_resource type="Script" uid="uid://cgvi35j5v0bbc" path="res://Scripts/map_emperor_castle.gd" id="1_kv318"]
+[ext_resource type="Texture2D" uid="uid://dwqu8l34skhhg" path="res://assets/sprites/sand.png" id="1_yq7bp"]
+[ext_resource type="Texture2D" uid="uid://ct5upp810viqn" path="res://assets/sprites/wood_wall_OLD.png" id="2_y4ud1"]
+[ext_resource type="PackedScene" uid="uid://5pflaidexy2h" path="res://Scenes/wallS.tscn" id="3_60hxj"]
+[ext_resource type="PackedScene" uid="uid://fupw5x5u40v4" path="res://Scenes/inviswall.tscn" id="4_kv318"]
+[ext_resource type="PackedScene" uid="uid://b3l1x2107cd7b" path="res://Scenes/inviswall2.tscn" id="5_5nd6s"]
+[ext_resource type="PackedScene" uid="uid://c28op5ykp6tl3" path="res://Scenes/wooden_Wall.tscn" id="6_03ev7"]
+[ext_resource type="PackedScene" uid="uid://budye3cu278wv" path="res://Scenes/flag.tscn" id="7_s0lgy"]
+[ext_resource type="PackedScene" uid="uid://bbjk1mq8ky0tc" path="res://Scenes/ak_47.tscn" id="8_d75b3"]
+[ext_resource type="PackedScene" uid="uid://c0n11i1l5c7l6" path="res://Scenes/aceg.tscn" id="11_60hxj"]
+[ext_resource type="PackedScene" uid="uid://bs4hbwb6mgwlv" path="res://Scenes/player.tscn" id="11_kv318"]
+[ext_resource type="Texture2D" uid="uid://hejgp4wdhffv" path="res://assets/sprites/flag_decor.png" id="12_kv318"]
+[ext_resource type="PackedScene" uid="uid://ct62t3m37spae" path="res://Scenes/defender.tscn" id="13_5nd6s"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_60hxj"]
+vertices = PackedVector2Array(735.34375, 376.65625, 514.8828, 379.5625, 514.8828, 129.59375, 738.34375, -71.13281, 513.28125, -71.96094, 513.28125, 101.88281, 491.5703, 129.59375, 489.97656, 101.88281, 54.273438, 23.0625, -143.61719, 24.5, -143.61719, -39.710938, 215.34375, -39.710938, 215.34375, 23, 69.71875, 24.023438, 54.492188, 50.632813, 69.96875, 51.59375, 151.82813, 350.5078, 111.09375, 350.47656, 215.34375, 50.570313, 215.34375, 145.57813, 215.21094, 189.63281, 191.77344, 350.47656, -38.921875, 90.28906, -143.61719, 90.99219, -143.61719, 52.0625, 437.65625, 380.5703, 251.42969, 379.89844, 253.07031, 189.89844, 253.20313, 145.57813, 253.20313, -72.89844, 489.97656, -72.03906, 491.5703, 379.85938, -125.40625, 350.5078, -125.40625, 350.57813, -143.61719, 350.53906, -143.61719, 179.21875, 111.09375, 350.57813, 73.38281, 350.5078, -37.179688, 179.03125, -37.257813, 151.46094, -85.60156, 350.5078, -85.60156, 350.57813, -45.789063, 350.5078, -45.789063, 350.57813, -143.61719, 151.64844, -143.61719, 118.5625, -38.703125, 117.85156, -4.65625, 350.57813, -4.6484375, 350.5078, 213.8125, 350.53906, 151.82031, 350.60156, 33.546875, 350.57813, 33.570313, 350.5078, 191.75, 350.57813, 73.359375, 350.57813)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 3, 2, 5), PackedInt32Array(5, 2, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(8, 11, 12, 13), PackedInt32Array(14, 8, 13, 15), PackedInt32Array(16, 17, 15, 18, 19, 20, 21), PackedInt32Array(22, 23, 24, 14), PackedInt32Array(25, 26, 27), PackedInt32Array(28, 29, 30, 7), PackedInt32Array(28, 7, 6, 31, 25, 27), PackedInt32Array(28, 27, 20, 19), PackedInt32Array(32, 33, 34, 35), PackedInt32Array(15, 17, 36, 37, 38, 39, 14), PackedInt32Array(40, 41, 32), PackedInt32Array(42, 43, 40), PackedInt32Array(39, 44, 45, 46), PackedInt32Array(32, 35, 38, 40), PackedInt32Array(42, 40, 38), PackedInt32Array(47, 42, 38, 48), PackedInt32Array(20, 49, 21), PackedInt32Array(16, 50, 17), PackedInt32Array(51, 48, 38, 52), PackedInt32Array(21, 53, 16), PackedInt32Array(37, 54, 52, 38), PackedInt32Array(46, 22, 14, 39)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(745.28094, 386.53564, -157.6557, 398.40622, -162.43315, -89.02932, 748.4659, -89.02932)])
+
+[node name="Map_Emperor_Castle" type="Node2D" unique_id=120952167]
+script = ExtResource("1_kv318")
+
+[node name="Sand" type="Sprite2D" parent="." unique_id=433573446]
+position = Vector2(576, 319)
+scale = Vector2(73.1875, 41.624996)
+texture = ExtResource("1_yq7bp")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=224328196]
+position = Vector2(210.00012, 114)
+scale = Vector2(1.2559022, 1.3478706)
+navigation_polygon = SubResource("NavigationPolygon_60hxj")
+
+[node name="WoodWall" type="Sprite2D" parent="NavigationRegion2D" unique_id=2146020076]
+position = Vector2(44.987488, 148.47496)
+scale = Vector2(25.031807, 29.015676)
+texture = ExtResource("2_y4ud1")
+
+[node name="wall32" parent="NavigationRegion2D" unique_id=1519014616 instance=ExtResource("3_60hxj")]
+position = Vector2(6.36982, 37.09555)
+rotation = 1.5623995
+scale = Vector2(0.14837892, -1.1669072)
+skew = 0.001106739
+
+[node name="wall31" parent="NavigationRegion2D/wall32" unique_id=430328143 instance=ExtResource("3_60hxj")]
+position = Vector2(2.4180298, -45.038948)
+
+[node name="wall30" parent="NavigationRegion2D" unique_id=1588998106 instance=ExtResource("3_60hxj")]
+position = Vector2(-78.827896, 37.837463)
+rotation = 1.5623995
+scale = Vector2(0.14837892, -1.1669072)
+skew = 0.001106739
+
+[node name="wall25" parent="NavigationRegion2D" unique_id=2066161101 instance=ExtResource("3_60hxj")]
+position = Vector2(160.84047, 37.095543)
+rotation = -1.5787863
+scale = Vector2(0.14837883, -3.2399187)
+skew = 0.0010530949
+
+[node name="wall33" parent="NavigationRegion2D" unique_id=1371272849 instance=ExtResource("3_60hxj")]
+position = Vector2(152.08182, 37.095543)
+rotation = -1.5787863
+scale = Vector2(0.14837883, -3.2399187)
+skew = 0.0010530949
+
+[node name="wall26" parent="NavigationRegion2D" unique_id=1442803652 instance=ExtResource("3_60hxj")]
+position = Vector2(-93.16022, 103.125626)
+rotation = 1.563034
+scale = Vector2(0.1483788, -2.3472102)
+skew = 0.0010230541
+
+[node name="wall27" parent="NavigationRegion2D" unique_id=1486026464 instance=ExtResource("3_60hxj")]
+position = Vector2(-97.14142, 166.18806)
+rotation = 1.5686628
+scale = Vector2(0.14837827, -2.3472178)
+skew = 0.0002812147
+
+[node name="wall24" parent="NavigationRegion2D" unique_id=700423807 instance=ExtResource("3_60hxj")]
+position = Vector2(-125.009834, 37.837456)
+rotation = 1.5623995
+scale = Vector2(0.14837892, -1.1669071)
+skew = 0.001106739
+
+[node name="inviswall2" parent="NavigationRegion2D" unique_id=498346793 instance=ExtResource("4_kv318")]
+position = Vector2(750.05835, -77.90065)
+scale = Vector2(0.7962404, 0.741911)
+
+[node name="inviswall3" parent="NavigationRegion2D" unique_id=246218527 instance=ExtResource("5_5nd6s")]
+position = Vector2(-162.43315, -85.31976)
+scale = Vector2(0.7962404, 0.741911)
+
+[node name="inviswall4" parent="NavigationRegion2D" unique_id=1721748554 instance=ExtResource("5_5nd6s")]
+position = Vector2(-167.21059, 393.21283)
+scale = Vector2(0.7962404, 0.741911)
+
+[node name="woodenwall3" parent="NavigationRegion2D" unique_id=1894794068 instance=ExtResource("6_03ev7")]
+position = Vector2(504.0201, 261.8946)
+scale = Vector2(1.5154369, 17.277058)
+
+[node name="woodenwall4" parent="NavigationRegion2D" unique_id=1757736006 instance=ExtResource("6_03ev7")]
+position = Vector2(502.42764, -5.1933775)
+scale = Vector2(1.5154369, 11.341768)
+
+[node name="wall" parent="NavigationRegion2D" unique_id=1016732125 instance=ExtResource("3_60hxj")]
+position = Vector2(-148.89703, 129.09251)
+scale = Vector2(0.25479585, 8.635845)
+
+[node name="wall22" parent="NavigationRegion2D" unique_id=1056039802 instance=ExtResource("3_60hxj")]
+position = Vector2(236.48328, 36.353638)
+rotation = 3.1415927
+scale = Vector2(0.35034245, -4.3252487)
+
+[node name="wall23" parent="NavigationRegion2D" unique_id=37814618 instance=ExtResource("3_60hxj")]
+position = Vector2(237.27953, 281.92615)
+rotation = 0.0074211066
+scale = Vector2(0.350341, -3.7023215)
+skew = 0.0011265278
+
+[node name="wall2" parent="NavigationRegion2D" unique_id=851542715 instance=ExtResource("3_60hxj")]
+position = Vector2(-132.97224, -68.255806)
+scale = Vector2(0.7962404, 0.741911)
+
+[node name="wall3" parent="NavigationRegion2D" unique_id=816078471 instance=ExtResource("3_60hxj")]
+position = Vector2(-93.956474, -68.255806)
+scale = Vector2(0.7962404, 0.741911)
+
+[node name="wall4" parent="NavigationRegion2D" unique_id=1583266663 instance=ExtResource("3_60hxj")]
+position = Vector2(-54.144455, -68.255806)
+scale = Vector2(0.7962404, 0.741911)
+
+[node name="wall5" parent="NavigationRegion2D" unique_id=2027975822 instance=ExtResource("3_60hxj")]
+position = Vector2(-14.332428, -68.255806)
+scale = Vector2(0.7962404, 0.741911)
+
+[node name="wall6" parent="NavigationRegion2D" unique_id=703549636 instance=ExtResource("3_60hxj")]
+position = Vector2(-136.1572, 362.97482)
+rotation = -3.139814
+scale = Vector2(0.79624015, 0.7419112)
+skew = 0.00027000904
+
+[node name="wall7" parent="NavigationRegion2D" unique_id=961917448 instance=ExtResource("3_60hxj")]
+position = Vector2(-96.34517, 362.9748)
+rotation = -3.139814
+scale = Vector2(0.79624015, 0.7419112)
+skew = 0.00027000904
+
+[node name="wall8" parent="NavigationRegion2D" unique_id=758090824 instance=ExtResource("3_60hxj")]
+position = Vector2(-56.533146, 362.9748)
+rotation = -3.139814
+scale = Vector2(0.79624015, 0.7419112)
+skew = 0.00027000904
+
+[node name="wall9" parent="NavigationRegion2D" unique_id=554370311 instance=ExtResource("3_60hxj")]
+position = Vector2(-16.721128, 362.97482)
+rotation = -3.139814
+scale = Vector2(0.79624015, 0.7419112)
+skew = 0.00027000904
+
+[node name="wall10" parent="NavigationRegion2D" unique_id=1139228522 instance=ExtResource("3_60hxj")]
+position = Vector2(23.090866, -68.255806)
+scale = Vector2(0.7962404, 0.741911)
+
+[node name="wall11" parent="NavigationRegion2D" unique_id=1686550785 instance=ExtResource("3_60hxj")]
+position = Vector2(62.106644, -68.255806)
+scale = Vector2(0.7962404, 0.741911)
+
+[node name="wall12" parent="NavigationRegion2D" unique_id=895165005 instance=ExtResource("3_60hxj")]
+position = Vector2(101.918655, -68.255806)
+scale = Vector2(0.7962404, 0.741911)
+
+[node name="wall13" parent="NavigationRegion2D" unique_id=1310912115 instance=ExtResource("3_60hxj")]
+position = Vector2(141.7307, -68.255806)
+scale = Vector2(0.7962404, 0.741911)
+
+[node name="wall14" parent="NavigationRegion2D" unique_id=824262921 instance=ExtResource("3_60hxj")]
+position = Vector2(23.090883, 362.9748)
+rotation = -3.139814
+scale = Vector2(0.79624015, 0.7419112)
+skew = 0.00027000904
+
+[node name="wall15" parent="NavigationRegion2D" unique_id=1095813370 instance=ExtResource("3_60hxj")]
+position = Vector2(61.310413, 362.9748)
+rotation = -3.139814
+scale = Vector2(0.79624015, 0.7419112)
+skew = 0.00027000904
+
+[node name="wall16" parent="NavigationRegion2D" unique_id=2122024453 instance=ExtResource("3_60hxj")]
+position = Vector2(101.12244, 362.9748)
+rotation = -3.139814
+scale = Vector2(0.79624015, 0.7419112)
+skew = 0.00027000904
+
+[node name="wall17" parent="NavigationRegion2D" unique_id=1638802507 instance=ExtResource("3_60hxj")]
+position = Vector2(140.13821, 362.97482)
+rotation = -3.1383977
+scale = Vector2(0.79623973, 0.74191165)
+skew = 0.0004850626
+
+[node name="wall18" parent="NavigationRegion2D" unique_id=2055382519 instance=ExtResource("3_60hxj")]
+position = Vector2(179.15398, -68.255806)
+scale = Vector2(0.7962404, 0.741911)
+
+[node name="wall29" parent="NavigationRegion2D" unique_id=452524103 instance=ExtResource("3_60hxj")]
+position = Vector2(225.33592, -68.25581)
+scale = Vector2(0.7962404, 0.741911)
+
+[node name="wall19" parent="NavigationRegion2D" unique_id=2049408330 instance=ExtResource("3_60hxj")]
+position = Vector2(214.18855, -68.25581)
+scale = Vector2(0.7962404, 0.741911)
+
+[node name="wall20" parent="NavigationRegion2D" unique_id=1752765550 instance=ExtResource("3_60hxj")]
+position = Vector2(186.32018, 362.97485)
+rotation = -3.139814
+scale = Vector2(0.79624015, 0.7419112)
+skew = 0.00027000904
+
+[node name="wall28" parent="NavigationRegion2D" unique_id=146760936 instance=ExtResource("3_60hxj")]
+position = Vector2(168.00665, 362.97485)
+rotation = -3.139814
+scale = Vector2(0.79624015, 0.7419112)
+skew = 0.00027000904
+
+[node name="wall21" parent="NavigationRegion2D" unique_id=703971045 instance=ExtResource("3_60hxj")]
+position = Vector2(223.74345, 362.97482)
+rotation = -3.1383977
+scale = Vector2(0.79623973, 0.74191165)
+skew = 0.0004850626
+
+[node name="Player" parent="." unique_id=239942715 instance=ExtResource("11_kv318")]
+position = Vector2(426.00003, 108)
+scale = Vector2(0.7547893, 0.83554435)
+
+[node name="AK48" parent="." unique_id=264655472 instance=ExtResource("8_d75b3")]
+position = Vector2(124, 73)
+
+[node name="AK49" parent="." unique_id=352898295 instance=ExtResource("8_d75b3")]
+position = Vector2(124, 127)
+
+[node name="Flag" parent="." unique_id=1285873708 instance=ExtResource("7_s0lgy")]
+position = Vector2(42, 290)
+
+[node name="AK51" parent="." unique_id=2036014806 instance=ExtResource("8_d75b3")]
+position = Vector2(184, 77)
+
+[node name="AK52" parent="." unique_id=535005689 instance=ExtResource("8_d75b3")]
+position = Vector2(184, 125)
+
+[node name="Aceg" parent="." unique_id=1359107985 instance=ExtResource("11_60hxj")]
+position = Vector2(151, 101)
+
+[node name="FlagDecor" type="Sprite2D" parent="." unique_id=454031403]
+position = Vector2(411, 24)
+texture = ExtResource("12_kv318")
+
+[node name="FlagDecor2" type="Sprite2D" parent="." unique_id=1595420226]
+position = Vector2(70, 24)
+texture = ExtResource("12_kv318")
+
+[node name="FlagDecor3" type="Sprite2D" parent="." unique_id=260834620]
+position = Vector2(137.00003, 597.2431)
+rotation = -3.1339815
+texture = ExtResource("12_kv318")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1698409761]
+
+[node name="WaveLabel" type="Label" parent="CanvasLayer" unique_id=1824036885]
+offset_left = 1.0
+offset_top = 593.0
+offset_right = 314.0
+offset_bottom = 639.0
+theme_override_colors/font_color = Color(0.35686275, 0, 0, 1)
+theme_override_font_sizes/font_size = 33
+text = "Подготовка: 60 сек"
+
+[node name="SpawnerPositions" type="Node2D" parent="." unique_id=694977883]
+
+[node name="Marker2D" type="Marker2D" parent="SpawnerPositions" unique_id=1039242912]
+position = Vector2(1102, 98)
+
+[node name="Marker2D2" type="Marker2D" parent="SpawnerPositions" unique_id=975452316]
+position = Vector2(1111, 275)
+
+[node name="Marker2D3" type="Marker2D" parent="SpawnerPositions" unique_id=699449350]
+position = Vector2(1109, 521)
+
+[node name="Defender" parent="." unique_id=1082409090 instance=ExtResource("13_5nd6s")]
+position = Vector2(79, 418)
+scale = Vector2(0.72, 0.76000124)
+
+[node name="Defender2" parent="." unique_id=1791189505 instance=ExtResource("13_5nd6s")]
+position = Vector2(65, 225)
+scale = Vector2(0.72, 0.76000124)
+
+[node name="Defender3" parent="." unique_id=1360816848 instance=ExtResource("13_5nd6s")]
+position = Vector2(207.00006, 297)
+scale = Vector2(0.72, 0.76000124)

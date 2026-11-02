@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://s8q0bi6rs36e"]
+
+[ext_resource type="Texture2D" uid="uid://erfcq8tc4cwn" path="res://assets/sprites/menu.png" id="1_48xlc"]
+[ext_resource type="Script" uid="uid://drs1i0fru2abm" path="res://Scripts/main_menu.gd" id="1_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://ctsehuu2ghdui" path="res://assets/sprites/play_button.png" id="2_1ehe0"]
+[ext_resource type="AudioStream" uid="uid://ccmge1p4jjv4s" path="res://assets/sounds/Postal 1 OST — Menu (www.lightaudio.ru).mp3" id="3_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://k5ipgbgoal8g" path="res://assets/sprites/exit_button.png" id="5_n45e2"]
+
+[node name="Main Menu" type="Control" unique_id=1790700605]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ce3w2")
+
+[node name="Menu" type="Sprite2D" parent="." unique_id=1157383346]
+position = Vector2(571.99994, 323)
+scale = Vector2(3.60625, 2.025)
+texture = ExtResource("1_48xlc")
+
+[node name="play" type="Button" parent="." unique_id=653260300]
+layout_mode = 0
+offset_left = 510.0
+offset_top = 244.99998
+offset_right = 638.0
+offset_bottom = 303.0
+icon = ExtResource("2_1ehe0")
+
+[node name="Postal1Ost—Menu(www_lightaudio_ru)" type="AudioStreamPlayer" parent="." unique_id=694054514]
+stream = ExtResource("3_1ehe0")
+autoplay = true
+
+[node name="exit" type="Button" parent="." unique_id=242659655]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 425.0
+offset_right = 640.0
+offset_bottom = 483.0
+icon = ExtResource("5_n45e2")
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

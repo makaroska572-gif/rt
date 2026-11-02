@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c0n11i1l5c7l6"]
+
+[ext_resource type="PackedScene" uid="uid://bxq8sqo1bh04s" path="res://Scenes/weapon.tscn" id="1_dk1au"]
+[ext_resource type="Texture2D" uid="uid://yxshihul56v1" path="res://assets/sprites/gun_aceg2.png" id="2_6u0ul"]
+[ext_resource type="AudioStream" uid="uid://m12ssjee35bq" path="res://assets/sounds/precise-booming-shot-from-a-short-barreled-weapon.mp3" id="3_yih2d"]
+
+[node name="Aceg" unique_id=264655472 instance=ExtResource("1_dk1au")]
+weapon_name = "Aseg"
+custom_texture = ExtResource("2_6u0ul")
+shoot_delay = 1.5
+damage = 80.0
+spread_degrees = 1.0
+shoot_sound = ExtResource("3_yih2d")
+
+[node name="Sprite2D" parent="." index="1" unique_id=1034214324]
+position = Vector2(0, 3)
+scale = Vector2(1.171875, 1.09375)
+texture = ExtResource("2_6u0ul")
+
+[node name="Muzzle" parent="." index="4" unique_id=1259009846]
+position = Vector2(16, 0)

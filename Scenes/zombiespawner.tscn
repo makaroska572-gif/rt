@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cdofhgyc8js7o"]
+
+[ext_resource type="Script" uid="uid://k47vwo2fyp6o" path="res://Scripts/zombiespawner.gd" id="1_3f4ph"]
+[ext_resource type="PackedScene" uid="uid://c1h34iixtyf2x" path="res://Scenes/zombie.tscn" id="2_7iem4"]
+
+[node name="Marker2D" type="Marker2D" unique_id=1528104222]
+script = ExtResource("1_3f4ph")
+zombie_scene = ExtResource("2_7iem4")

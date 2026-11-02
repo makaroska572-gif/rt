@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://ct62t3m37spae"]
+
+[ext_resource type="Script" uid="uid://bupwtyovvy5pq" path="res://Scripts/defender.gd" id="1_7fgga"]
+[ext_resource type="Texture2D" uid="uid://cr14nep6wrqkr" path="res://assets/sprites/DEFENDER_1.png" id="2_7fgga"]
+[ext_resource type="Texture2D" uid="uid://bdlwvekfj6dqh" path="res://assets/sprites/left eye.png" id="3_17t5b"]
+[ext_resource type="Texture2D" uid="uid://c0mi44gbojnyc" path="res://assets/sprites/righteye.png" id="4_faxwx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_orkc2"]
+size = Vector2(30, 31)
+
+[node name="Defender" type="CharacterBody2D" unique_id=1082409090]
+script = ExtResource("1_7fgga")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=259316406]
+position = Vector2(-0.9999995, 0.50000095)
+scale = Vector2(1.8823531, 1.9411765)
+texture = ExtResource("2_7fgga")
+
+[node name="Eyes" type="Node2D" parent="Sprite2D" unique_id=365947777]
+
+[node name="LeftPupil" type="Sprite2D" parent="Sprite2D/Eyes" unique_id=95174696]
+texture = ExtResource("3_17t5b")
+
+[node name="RightPupil" type="Sprite2D" parent="Sprite2D/Eyes" unique_id=751017130]
+texture = ExtResource("4_faxwx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=692903650]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_orkc2")
+
+[node name="HealthLabel" type="Label" parent="." unique_id=220542390]
+offset_left = -45.0
+offset_top = -39.0
+offset_right = 55.0
+offset_bottom = -16.0
+text = "HP: 150 / 150"
+
+[node name="WeaponAnchor" type="Node2D" parent="." unique_id=289170576]
+position = Vector2(9, 6)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1495460519]
